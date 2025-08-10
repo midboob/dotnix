@@ -53,5 +53,6 @@
       "float, title:^(Library)(.*)$"
       "float, title:^(File Upload)(.*)$"
     ];
+		workspace = "1, monitor:DP-6";
   };
 }

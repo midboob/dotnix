@@ -7,7 +7,7 @@
 		"$colorPicker" = "${pkgs.hyprpicker}/bin/hyprpicker -a";
 
     "$terminal" = "${pkgs.ghostty}/bin/ghostty";
-    "$browser" = "${pkgs.firefox}/bin/firefox";
+    "$browser" = "${pkgs.brave}/bin/brave";
 		"$explorer" = "${pkgs.nautilus}/bin/nautilus";
     "$calc" = "${pkgs.gnome-calculator}/bin/gnome-calculator";
 		"$emoji" = "${pkgs.bemoji}/bin/bemoji";

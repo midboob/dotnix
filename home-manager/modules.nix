@@ -10,7 +10,7 @@
 		./modules/rofi
 		./modules/alacritty
 		./modules/tmux
-		./modules/fish
+		./modules/zsh
 
 		./modules/git
 		./modules/cli
@@ -18,5 +18,7 @@
 		./modules/nixvim
 		./modules/nixcord
 		./modules/spicetify
+
+		# ./modules/startpage
 	];
 }
