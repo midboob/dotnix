@@ -7,7 +7,7 @@
 	};
 
 	environment.systemPackages = with pkgs; [
-		alacritty
+		ghostty
 
 		hyprpicker
 		grim

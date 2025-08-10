@@ -16,7 +16,6 @@
 		mpv
 		qbittorrent
 		kitty
-		ghostty
 		brave
 		rofi
 		stow
@@ -37,7 +36,8 @@
 		oh-my-posh
 		eza
 		yazi
-                neovim
+    neovim
+		bluez
 		bat
 		btop
 		cava
