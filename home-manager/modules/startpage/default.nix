@@ -2,7 +2,7 @@
 
 {
   home.file."startpage" = {
-    source = ./startpage;      # relative to this module file
+    source = ./;      # relative to this module file
     recursive = true;           # replicate the directory structure with symlinks
   };
 }
