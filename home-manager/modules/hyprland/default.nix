@@ -1,10 +1,18 @@
 { pkgs, ... }: {
 
 	imports = [
-		./general.nix
-		./keybinds.nix
-		./env.nix
-		./windowrules.nix
+		./animation.nix
+		./autostart.nix
+		./decoration.nix
+		./environment.nix
+		./keybinding.nix
+		./keyboard.nix
+		./layout.nix
+		./misc.nix
+		./monitor.nix
+		./programs.nix
+		./rules.nix
+		./window.nix
 	];
 
 	stylix.targets.hyprland.enable = true;
