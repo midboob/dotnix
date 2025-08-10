@@ -4,6 +4,7 @@
 		enable = true;
 		xwayland.enable = true;
 		portalPackage = pkgs.xdg-desktop-portal-gtk;
+
 	};
 
 	environment.systemPackages = with pkgs; [
@@ -13,7 +14,7 @@
 		grim
 		slurp
 		swaylock
-		swaybg
+		swww
 		swaynotificationcenter
 		waypaper
 		waybar
@@ -35,6 +36,7 @@
 		QT_QPA_PLATFORMTHEME = "qt5ct";
 		ELECTRON_OZONE_PLATFORM_HINT = "wayland";
 		XDG_SESSION_TYPE = "wayland";
+		NIXOS_OZONE_WL = "1";
 	};
 
 	xdg = {
