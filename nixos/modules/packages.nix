@@ -10,8 +10,6 @@
 		bleachbit
 		gimp
 		obsidian
-		steam
-		vesktop
 		zathura
 		mpv
 		qbittorrent
@@ -64,6 +62,9 @@
 		gh
 		sl
 
+    steam
+    steam-original
+    steam-unwrapped
 		steam-run
 
 		# Other

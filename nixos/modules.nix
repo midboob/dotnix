@@ -10,5 +10,6 @@
 		./modules/gnomeapps.nix
 		./modules/homelab.nix
 		./modules/openrgb.nix
+		./modules/steam.nix
 	];
 }

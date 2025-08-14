@@ -7,7 +7,12 @@
 			adblock
 			keyboardShortcut
 			hidePodcasts
+      shuffle
+      fullAppDisplayMod
 		];
+    enabledCustomApps = with spicePkgs.apps; [
+      lyricsPlus
+    ];
 		theme = spicePkgs.themes.text;
 		colorScheme = "RosePine";
 	};

@@ -1,4 +1,5 @@
 { pkgs, ... }: {
+
   programs.yazi = {
     enable = true;
 
@@ -35,13 +36,13 @@
         ueberzug_scale = 1;
         ueberzug_offset = [ 0 0 0 0 ];
       };
+    };
 
     yaziPlugins = {
       enabled = true;
       plugins = {
         full-border.enable = true;
-
-        };
+      };
     };
   };
 }

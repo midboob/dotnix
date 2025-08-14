@@ -67,6 +67,9 @@
 			"float, center, class:^(nwg-look)$"
     ];
 
-		layerrule = [];
+		layerrule = [
+    "animation slide, rofi"
+    "dimaround, rofi"
+    ];
   };
 }

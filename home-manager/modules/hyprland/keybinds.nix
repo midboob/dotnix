@@ -8,7 +8,6 @@
 
     "$terminal" = "${pkgs.ghostty}/bin/ghostty";
     "$browser" = "${pkgs.brave}/bin/brave";
-    "$music" = "${pkgs.spotify}/bin/spotify";
 		"$explorer1" = "$terminal -e ${pkgs.yazi}/bin/yazi";
 		"$explorer2" = "${pkgs.nautilus}/bin/nautilus";
 		"$notes" = "${pkgs.obsidian}/bin/obsidian";
@@ -26,12 +25,11 @@
       "$mod, F, fullscreen, 1"
       "$mod SHIFT, F, fullscreen, 0"
 
-			# Programs
       "$mod, return, exec, $terminal"
       "$mod, B, exec, $browser"
       "$mod, E, exec, $explorer1"
       "$mod SHIFT, E, exec, $explorer2"
-      "$mod, M, exec, $music"
+      "$mod, M, exec, spotify"
       "$mod, O, exec, $notes"
       "$mod, N, exec, $editor"
       "$mod SHIFT, B, exec, $bluetooth"
