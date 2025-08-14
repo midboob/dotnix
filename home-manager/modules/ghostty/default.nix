@@ -30,7 +30,8 @@ stylix.targets.ghostty.enable = true;
     installBatSyntax = true;
 
     enableBashIntegration = true;
-    enableZshIntegration = false;
-    enableFishIntegration = false;
+    enableZshIntegration = true;
+    enableFishIntegration = true;
+    };
   };
 }

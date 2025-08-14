@@ -10,9 +10,9 @@
 			"${pkgs.swaynotificationcenter}/bin/swaync"
 			"${pkgs.waypaper}/bin/waypaper --restore"
 
-			# Set volume to #65%
-			"sleep 4 && ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.64"
-			"sleep 5 && ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.65"
+			# Set volume to #100%
+			"sleep 4 && ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 1"
+			"sleep 5 && ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 1"
 
 			# Clipboard history
 			"${pkgs.cliphist}/bin/cliphist wipe"

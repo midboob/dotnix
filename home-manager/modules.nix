@@ -19,6 +19,7 @@
 		./modules/nvim
 		./modules/nixcord
 		./modules/spicetify
+		./modules/yazi
 
 		./modules/startpage
 		./modules/openrgb
