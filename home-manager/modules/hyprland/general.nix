@@ -9,7 +9,6 @@
 			"${pkgs.waybar}/bin/waybar"
 			"${pkgs.swaynotificationcenter}/bin/swaync"
 			"${pkgs.waypaper}/bin/waypaper --restore"
-			"${pkgs.openrgb}/bin/openrgb"
 
 			# Set volume to #65%
 			"sleep 4 && ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.64"
