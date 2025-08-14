@@ -24,7 +24,7 @@
 		localsend
 		openrgb
 		waybar
-
+    adwsteamgtk
 
 		# CLI
 		brightnessctl
@@ -63,7 +63,6 @@
 		sl
 
     steam
-    steam-original
     steam-unwrapped
 		steam-run
 

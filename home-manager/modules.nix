@@ -15,6 +15,7 @@
 		./modules/git
 		./modules/cli
 		./modules/firefox
+		./modules/brave
 		# ./modules/nixvim
 		./modules/nvim
 		./modules/nixcord
