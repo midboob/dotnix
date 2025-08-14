@@ -8,7 +8,7 @@
 		./modules/swaync
 		./modules/swaylock
 		./modules/rofi
-		./modules/alacritty
+		./modules/ghostty
 		./modules/tmux
 		./modules/fish
 
