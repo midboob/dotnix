@@ -15,12 +15,13 @@
 		./modules/git
 		./modules/cli
 		./modules/firefox
-		./modules/brave
 		# ./modules/nixvim
 		./modules/nvim
 		./modules/nixcord
 		./modules/spicetify
+		./modules/mpv
 		# ./modules/yazi
+
 
 		./modules/startpage
 		./modules/openrgb
