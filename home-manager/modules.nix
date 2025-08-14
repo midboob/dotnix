@@ -20,5 +20,6 @@
 		./modules/spicetify
 
 		./modules/startpage
+		./modules/openrgb
 	];
 }

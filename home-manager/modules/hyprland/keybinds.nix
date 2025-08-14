@@ -9,7 +9,7 @@
     "$terminal" = "${pkgs.ghostty}/bin/ghostty";
     "$browser" = "${pkgs.brave}/bin/brave";
     "$music" = "${pkgs.spotify}/bin/spotify";
-		"$explorer1" = "${pkgs.yazi}/bin/yazi";
+		"$explorer1" = "$terminal -e ${pkgs.yazi}/bin/yazi";
 		"$explorer2" = "${pkgs.nautilus}/bin/nautilus";
 		"$notes" = "${pkgs.obsidian}/bin/obsidian";
 		"$emoji" = "${pkgs.bemoji}/bin/bemoji";
@@ -31,10 +31,9 @@
       "$mod, B, exec, $browser"
       "$mod, E, exec, $explorer1"
       "$mod SHIFT, E, exec, $explorer2"
-      "$mod SHIFT, E, exec, $explorer2"
       "$mod, M, exec, $music"
       "$mod, O, exec, $notes"
-      "$mod SHIFT, B, exec, $notes"
+      "$mod SHIFT, B, exec, $bluetooth"
 
       "$mod, Z, exec, $colorPicker"
       "$mod SHIFT, W, exec, $wallpaper"
@@ -61,8 +60,8 @@
       "$mod CTRL, K, movewindow, u"
 
       # Move/resize windows with $mod + LMB/RMB and dragging
-      "$mod, mouse:272, movewindow"
-      "$mod, mouse:273, resizeactive"
+      # "$mod, mouse:272, movewindow"
+      # "$mod, mouse:273, resizeactive"
 
     ]
     ++(
