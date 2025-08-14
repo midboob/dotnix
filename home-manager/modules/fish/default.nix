@@ -1,12 +1,12 @@
 { pkgs, ...}: {
 
-	stylix.targets.zsh.enable = true;
+	stylix.targets.fish.enable = true;
 
-	programs.zsh = {
+	programs.fish = {
 		enable = true;
-		enableCompletions = true;
-		autosuggestion.enable = true;
-		syntaxHighlighting.enable = true;
+		# enableCompletion = true;
+		# autosuggestion.enable = true;
+		# syntaxHighlighting.enable = true;
 
 		shellAliases = {
 
@@ -64,6 +64,10 @@
 			# ani-cli
 			ani = "ani-cli";
 		};
+
+			interactiveShellInit = ''
+				set fish_greeting
+				'';
 	};
 
 	home.packages = with pkgs; [

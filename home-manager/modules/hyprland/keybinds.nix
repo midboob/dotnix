@@ -14,7 +14,7 @@
 		"$notes" = "${pkgs.obsidian}/bin/obsidian";
 		"$emoji" = "${pkgs.bemoji}/bin/bemoji";
 		"$bluetooth" = "${pkgs.overskride}/bin/overskride";
-		"$editor" = "${pkgs.neovim}/bin/nvim";
+		"$editor" = "$terminal -e ${pkgs.neovim}/bin/nvim";
 
     "$mod" = "SUPER";
 
@@ -33,6 +33,7 @@
       "$mod SHIFT, E, exec, $explorer2"
       "$mod, M, exec, $music"
       "$mod, O, exec, $notes"
+      "$mod, N, exec, $editor"
       "$mod SHIFT, B, exec, $bluetooth"
 
       "$mod, Z, exec, $colorPicker"
