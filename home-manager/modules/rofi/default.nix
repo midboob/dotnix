@@ -7,6 +7,7 @@
 	stylix.targets.rofi.enable = true;
 	home.file.".config/rofi/config.rasi".source = ./config.rasi;
 
+	# home.file.".config/rofi/theme/rasi".source = ./
 	home.file.".config/rofi/theme.rasi".text= ''
 * {
     highlight: bold italic;
