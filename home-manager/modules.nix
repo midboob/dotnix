@@ -3,7 +3,7 @@
 		./modules/theme
 
 		./modules/hyprland
-		./modules/waypaper
+		# ./modules/waypaper
 		./modules/waybar
 		./modules/swaync
 		./modules/swaylock
@@ -19,11 +19,11 @@
 		./modules/nvim
 		./modules/nixcord
 		./modules/spicetify
-		./modules/mpv
 		# ./modules/yazi
 
 
 		./modules/startpage
 		./modules/openrgb
+		./modules/mpv
 	];
 }
