@@ -5,7 +5,7 @@
 	programs.zsh = {
 		enable = true;
 		enableCompletions = true;
-		autosuggestions.enable = true;
+		autosuggestion.enable = true;
 		syntaxHighlighting.enable = true;
 
 		shellAliases = {
