@@ -8,40 +8,45 @@
 
     "$terminal" = "${pkgs.ghostty}/bin/ghostty";
     "$browser" = "${pkgs.brave}/bin/brave";
-		"$explorer" = "${pkgs.nautilus}/bin/nautilus";
-    "$calc" = "${pkgs.gnome-calculator}/bin/gnome-calculator";
+    "$music" = "${pkgs.spotify}/bin/spotify";
+		"$explorer1" = "${pkgs.yazi}/bin/yazi";
+		"$explorer2" = "${pkgs.nautilus}/bin/nautilus";
+		"$notes" = "${pkgs.obsidian}/bin/obsidian";
 		"$emoji" = "${pkgs.bemoji}/bin/bemoji";
-    "$discord" = "${pkgs.vesktop}/bin/vesktop";
+		"$bluetooth" = "${pkgs.overskride}/bin/overskride";
+		"$editor" = "${pkgs.neovim}/bin/nvim";
 
     "$mod" = "SUPER";
 
     bind = [
 			# Basic
-      "$mod SHIFT, Q, killactive,"
-      "$mod SHIFT, M, exit,"
+      "$mod, Q, killactive,"
+      "$mod SHIFT, Q, exec, hyprctl activewindow | grep pid | tr -d 'pid:'| xargs kill,"
       "$mod, V, togglefloating,"
-      "$mod, F, fullscreen,"
+      "$mod, F, fullscreen, 1"
+      "$mod SHIFT, F, fullscreen, 0"
 
 			# Programs
       "$mod, return, exec, $terminal"
       "$mod, B, exec, $browser"
-      "$mod, E, exec, $explorer"
-      "$mod, T, exec, $calc"
-      "$mod, D, exec, $discord"
+      "$mod, E, exec, $explorer1"
+      "$mod SHIFT, E, exec, $explorer2"
+      "$mod SHIFT, E, exec, $explorer2"
+      "$mod, M, exec, $music"
+      "$mod, O, exec, $notes"
+      "$mod SHIFT, B, exec, $notes"
 
       "$mod, Z, exec, $colorPicker"
-      "$mod, P, exec, $wallpaper"
-      "$mod, O, exec, $lock"
+      "$mod SHIFT, W, exec, $wallpaper"
 
 			# Screenshot(grim + slurp)
 			"$mod SHIFT, S, exec, ${./screenshot.sh}"
 			", Print, exec, ${pkgs.grim}/bin/grim - | ${pkgs.wl-clipboard}/bin/wl-copy && ${pkgs.wl-clipboard}/bin/wl-paste > ~/Pictures/Screenshots/Screenshot-$(date +%F_%T).png"
 
 			# Rofi thing
-      "$mod, R, exec, $menu -show drun"
+      "$mod, Space, exec, $menu -show drun"
       "$mod, U, exec, $emoji"
-      "$mod, G, exec, cliphist list | $menu -dmenu | cliphist decode | wl-copy"
-      "$mod, Semicolon, exec, ps -ef | rofi -dmenu | awk '{print $2}' | xargs -r kill -9"
+      "$mod, Y, exec, cliphist list | $menu -dmenu | cliphist decode | wl-copy"
 
       # Move focus with $mod + HJKL(Vim keys) 
       "$mod, H, movefocus, l"

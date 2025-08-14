@@ -9,6 +9,7 @@
 			"${pkgs.waybar}/bin/waybar"
 			"${pkgs.swaynotificationcenter}/bin/swaync"
 			"${pkgs.waypaper}/bin/waypaper --restore"
+			"${pkgs.openrgb}/bin/openrgb"
 
 			# Set volume to #65%
 			"sleep 4 && ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.64"
@@ -20,8 +21,8 @@
 		];
 
 		general =  {
-			"gaps_in" = 5;
-			"gaps_out" = 10;
+			"gaps_in" = 3;
+			"gaps_out" = 5;
 			"gaps_workspaces" = 50;
 
 			"border_size" = 2;
@@ -35,12 +36,24 @@
 		decoration = {
 			"rounding" = 0;
 			"active_opacity" = 1;
-			"inactive_opacity" = 1;
+			"inactive_opacity" = 0.9;
+			"fullscreen_opacity" = 1;
+
+			blur = {
+				"enabled" = true;
+				"size" = 6;
+				"passes" = 2;
+				"new_optimizations" = true;
+				"ignore_opacity" = true;
+				"xray" = false;
+				"popups" = true;
+				"special" = true;
+			};
 
 			shadow = {
 				"enabled" = true;
-				"range" = 7;
-				"render_power" = 3;
+				"range" = 5;
+				"render_power" = 2;
 				"color" = lib.mkDefault "rgba(1a1a1aee)"; # Fallback
 			};
 		};
@@ -79,18 +92,28 @@
 
 		dwindle = {
 			"preserve_split" = true;
+			"pseudotile" = true;
 		};
 
 		misc = {
-			"force_default_wallpaper" = -1;
+			"force_default_wallpaper" = 0;
 			"disable_hyprland_logo" = false;
+    	"disable_splash_rendering" = true;
+    	"initial_workspace_tracking" = 1;
 		};
 
 		input = {
-			"kb_layout" = [ "us, ru" ];
-			"kb_options" = "grp:alt_shift_toggle,caps:escape";
+			"kb_layout" = [ "us" ];
 			"follow_mouse" = 1;
 			"sensitivity" = 0;
+			"numlock_by_default" = true;
+			"accel_profile" = "flat";
+			"force_no_accel" = true;
+
+			touchpad = {
+				"natural_scroll" = false;
+				"scroll_factor" = 1;
+			};
 		};
 	};
 }

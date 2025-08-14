@@ -4,7 +4,6 @@
 		enable = true;
 		xwayland.enable = true;
 		portalPackage = pkgs.xdg-desktop-portal-gtk;
-
 	};
 
 	environment.systemPackages = with pkgs; [
@@ -14,7 +13,6 @@
 		grim
 		slurp
 		swaylock
-		swww
 		swaynotificationcenter
 		waypaper
 		waybar

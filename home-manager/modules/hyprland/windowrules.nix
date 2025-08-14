@@ -1,5 +1,8 @@
 {
   wayland.windowManager.hyprland.settings = {
+
+		workspace = "1, monitor:DP-6";
+
     windowrule = [
       # Picture-in-Picture PART 1
       "pin, title:^(Picture-in-Picture)$"
@@ -52,7 +55,18 @@
       "float, title:^(Save As)(.*)$"
       "float, title:^(Library)(.*)$"
       "float, title:^(File Upload)(.*)$"
+
+			# Always float
+			"float, center, class:^(waypaper)$"
+			"float, center, class:^(steam|Steam)$"
+			"float, center, class:^(io.github.kaii_lb.Overskride)$"
+			"float, center, class:^(nm-connection-editor)$"
+			"float, center, class:^(org.gnome.Calculator)$"
+			"float, center, class:^(openrgb)$"
+			"float, center, class:^(heroic)$"
+			"float, center, class:^(nwg-look)$"
     ];
-		workspace = "1, monitor:DP-6";
+
+		layerrule = [];
   };
 }
