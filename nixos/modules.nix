@@ -11,7 +11,6 @@
 		./modules/user.nix
 		./modules/gnomeapps.nix
 		./modules/homelab.nix
-		./modules/openrgb.nix
 		./modules/games.nix
 	];
 }
