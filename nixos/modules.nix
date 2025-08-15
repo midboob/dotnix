@@ -1,7 +1,7 @@
 {
 	imports = [
-		# ./modules/desktop.nix
-		./modules/laptop.nix
+		./modules/desktop.nix
+		# ./modules/laptop.nix
 
 		./modules/packages.nix
 		./modules/wayland.nix
@@ -11,7 +11,7 @@
 		./modules/user.nix
 		./modules/gnomeapps.nix
 		./modules/homelab.nix
-		# ./modules/openrgb.nix
+		./modules/openrgb.nix
 		./modules/games.nix
 	];
 }

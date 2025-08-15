@@ -26,6 +26,9 @@
 
 			# Tmux
 			t = "tmux";
+
+      # Yazi
+      y = "yazi";
 			
 			# Eza
 			ls = "eza --icons=auto --classify --group-directories-first --header --time-style=long-iso";
