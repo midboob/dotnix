@@ -5,7 +5,7 @@
       logo = {
         source = "${./png/5.png}";
         type = "kitty"; # or file
-        height = 18;
+        height = 20;
         padding = {
           top = 1;
           bottom = 0;
@@ -17,6 +17,7 @@
         separator = " •  ";
       };
       modules = [
+        "break"
         "break"
         "break"
         {
