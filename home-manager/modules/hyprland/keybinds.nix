@@ -6,7 +6,7 @@
     "$menu" = "${pkgs.rofi-wayland}/bin/rofi";
 		"$colorPicker" = "${pkgs.hyprpicker}/bin/hyprpicker -a";
 
-    "$terminal" = "${pkgs.ghostty}/bin/ghostty";
+    "$terminal" = "${pkgs.kitty}/bin/kitty";
     "$browser" = "${pkgs.brave}/bin/brave";
 		"$explorer1" = "$terminal -e ${pkgs.yazi}/bin/yazi";
 		"$explorer2" = "${pkgs.nautilus}/bin/nautilus";
