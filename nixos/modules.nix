@@ -3,10 +3,8 @@
 		./modules/desktop.nix
 		# ./modules/laptop.nix
 
-
 		./modules/packages.nix
 		./modules/wayland.nix
-		./modules/graphics.nix
 		./modules/bootloader.nix
 		./modules/audio.nix
 		./modules/shell.nix
@@ -14,6 +12,6 @@
 		./modules/gnomeapps.nix
 		./modules/homelab.nix
 		./modules/openrgb.nix
-		./modules/steam.nix
+		./modules/games.nix
 	];
 }

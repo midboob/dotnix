@@ -1,6 +1,6 @@
-{ config, ... }:
+{ config, ... }: {
 
-{
+  #Boot settings
 	boot = {
     loader = {
       grub = {
@@ -16,9 +16,9 @@
       };
     };
   };
-
   boot.supportedFilesystems = [ "ntfs" ];
 
+  # Mounting additional drives
   fileSystems = {
     "/mnt/Storage" = {
         device = "/dev/disk/by-uuid/9A62A5A562A5871B";
@@ -32,4 +32,32 @@
         options = [ "rw" "uid=1000" "gid=100" "dmask=022" "fmask=133" ];
       };
     };
+
+  # Graphic Settings
+	hardware.nvidia = {
+		modesetting.enable = true;
+		nvidiaSettings = true;
+		open = false;
+		package = config.boot.kernelPackages.nvidiaPackages.stable;
+	};
+ 
+	services.xserver.videoDrivers = ["nvidia"];
+  hardware = {
+    graphics.enable = true;
+    opengl = {
+        enable = true;
+        driSupport = true;
+        driSupport32Bit = true;
+      };
+    };
+
+	environment.sessionVariables = {
+		LIBVA_DRIVER_NAME = "nvidia";
+		GBM_BACKEND = "nvidia-drm";
+		__GLX_VENDOR_LIBRARY_NAME = "nvidia";
+		__GL_GSYNC_ALLOWED = "1";
+		__GL_VRR_ALLOWED = "1";
+		__VK_LAYER_NV_optimus = "NVIDIA_only";
+		NVD_BACKEND = "direct";
+	};
 }
