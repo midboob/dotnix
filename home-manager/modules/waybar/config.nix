@@ -5,80 +5,89 @@
 		layer = "top";
 		position = "top";
 		height = 28;
-		spacing = 10;
+    margin-top = 5;
+    margin-bottom = 0;
+    margin-left = 5;
+    margin-right = 5;
 		ipc = true;
 
 		# Placement
 		modules-left = [
 			"hyprland/workspaces"
 		];
+
 		modules-center = [
-			"hyprland/window"
-		];
-		modules-right = [
-			"custom/notification"
-			"custom/spacer"
-			"pulseaudio"
-			"custom/spacer"
-			"memory"
-			"custom/spacer"
-			"cpu"
-			"custom/spacer"
 			"clock"
 		];
 
-		# Modules
+		modules-right = [
+      "tray"
+			"custom/spacer"
+      "backlight"
+			"pulseaudio"
+			"custom/spacer"
+			"custom/notification"
+		];
 
+		# Modules
 		"custom/spacer" = {
 			tooltip = false;
 			format = "|";
 		};
 
-		"pulseaudio" = {
-			format = "{volume}% {icon} ";
-			format-bluetooth = "{volume}% {icon} ";
-			format-muted = "";
-			scroll-step = 1;
-			on-click = "pwvucontrol";
-			format-icons = {
-				headphone = "";
-				hands-free = "";
-				headset = "";
-				phone = "";
-				phone-muted = "";
-				portable = "";
-				car = "";
-				default = [ "" "" ];
-			};
-		};
+    "pulseaudio" =  {
+      format = "<b>{volume}%</b> {icon}";
+      format-muted = " 󰝟 ";
+      format-bluetooth = "<b>{volume}%</b> {icon} ";
+      format-bluetooth-muted = "󰝟 ";
+      format-icons = {
+        headphone = "";
+        hands-free = "";
+        headset = "";
+        phone = "";
+        portable = "";
+        car = "";
+        default = [
+          "󰕿"
+          "󰖀"
+          "󰕾"
+        ];
+      };
+    };
+
+    "backlight" = {
+      format = "{icon} <b>{percent}%</b> |";
+      format-icons =  [
+        "󰃞"
+        "󰃟"
+        "󰃠"
+      ];
+      tooltip =  false;
+    };
+
+    "tray" = {
+      icon-size = 15;
+      spacing = 5;
+    };
 
 		# Hyprland modules
-
-		"hyprland/workspaces" = {
-			format = "{name}";
-			persistent-workspaces."*" = 9; 
-		};
+    "hyprland/workspaces" = {
+      all-outputs = true;
+      format = "{name}";
+      on-scroll-up = "hyprctl dispatch workspace e+1 1>/dev/null";
+      on-scroll-down = "hyprctl dispatch workspace e-1 1>/dev/null";
+      sort-by-number = true;
+      active-only = false;
+    };
 
 		# Base modules
 		"clock" = {
 			interval = 60;
-			format = "{:%d/%m/%y %H:%M}";
-		};
-
-		# Hardware
-
-		"cpu" = {
-			interval = 10;
-			format = "{usage}%  ";
-		};
-
-		"memory" = {
-			interval = 30;
-			format = "{percentage}%  ";
+			format = "{:%m/%d %I:%M}";
+			tooltip = false;
 		};
 
 		# Notificaions
-
 		"custom/notification" = {
 			tooltip = false;
 			format = "{} {icon} ";

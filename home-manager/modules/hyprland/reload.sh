@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 # Kill and restart Waybar and SwayNC
-killall -9 waybar
-killall -9 swaync
+pkill waybar
+pkill swaync
 
 # Optional: Kill any currently running Rofi instances
-killall -9 rofi
+pkill rofi
 
 # Reload Hyprland configuration
 hyprctl reload

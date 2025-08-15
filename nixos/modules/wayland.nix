@@ -13,9 +13,11 @@
 		grim
 		slurp
 		swaylock
+    hyprlock
 		swaynotificationcenter
 		waypaper
 		waybar
+    swww
 
 		gnome-keyring
 		cliphist

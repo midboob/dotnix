@@ -25,13 +25,13 @@ stylix.targets.ghostty.enable = true;
       background-opacity = 0.8;
       confirm-close-surface = false;
 
-    clearDefaultKeybinds = false;
-    installVimSyntax = true;
-    installBatSyntax = true;
-
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-    enableFishIntegration = true;
+    # clearDefaultKeybinds = false;
+    # installVimSyntax = true;
+    # installBatSyntax = true;
+    #
+    # enableBashIntegration = true;
+    # enableZshIntegration = true;
+    # enableFishIntegration = true;
     };
   };
 }

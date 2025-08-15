@@ -65,6 +65,7 @@
 			"float, center, class:^(openrgb)$"
 			"float, center, class:^(heroic)$"
 			"float, center, class:^(nwg-look)$"
+			"float, center, class:^(org.pulseaudio.pavucontrol)$"
     ];
 
 		layerrule = [

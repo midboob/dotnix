@@ -1,15 +1,15 @@
 @import "./colors.css";
 
 * {
-	font-family: Fira Code, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+	font-family: Fira Code;
 	font-weight: bold;
-	font-size: 10pt;
+	font-size: 9pt;
 }
 
 /* Bar itself */
 window#waybar {
 	background: @background;
-	border-bottom: 2px solid @border;
+	border: 2px solid @border;
 }
 
 /* Text colors */
@@ -26,10 +26,10 @@ window#waybar {
 
 /* Apply margin to first and last module */
 #workspaces {
-	margin-left: 20px;
+	margin-left: 15px;
 }
 #clock {
-	margin-right: 20px;
+	margin-right: 0px;
 }
 
 /* Spacer */
@@ -40,7 +40,7 @@ window#waybar {
 /* Workspaces */
 
 #workspaces button {
-	padding: 0 7px 0 7px;
+	padding: 0 4px 0 4px;
 	border-radius: 0;
 	color: @ws-active-text;
 	min-width: 10px;
@@ -52,22 +52,22 @@ window#waybar {
 }
 
 #workspaces button.empty {
-	padding: 0 7px 0 7px;
+	padding: 0 4px 0 4px;
 	border-radius: 0;
 	color: @ws-persistent-text;
 }
 
 #workspaces button.active {
-	padding: 2px 7px 0 7px;
+	padding: 1px 4px 0 4px;
 	border-bottom: 2px solid @ws-focused;
 	color: @ws-active-text;
 }
 
 #workspaces button.urgent {
-	padding: 2px 7px 0 7px;
+	padding: 1px 4px 0 4px;
 	border-bottom: 2px solid @ws-urgent;
 }
 
 #custom-notification {
-	margin-right: 0px;
+	margin-right: 15px;
 }
