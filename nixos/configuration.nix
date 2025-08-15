@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }: {
 
 	imports = [
-		./hardware-configuration.nix
+		/etc/nixos/hardware-configuration.nix
 		./modules.nix
 	];
 	i18n.defaultLocale = "en_US.UTF-8";

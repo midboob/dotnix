@@ -1,5 +1,9 @@
 {
 	imports = [
+		./modules/desktop.nix
+		# ./modules/laptop.nix
+
+
 		./modules/packages.nix
 		./modules/wayland.nix
 		./modules/graphics.nix
