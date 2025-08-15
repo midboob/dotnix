@@ -3,8 +3,8 @@
     enable = true;
     settings = {
       logo = {
-        source = "./ascii1.txt";
-        type = "auto";
+        source = "${./png/5.png}";
+        type = "kitty"; # or file
         height = 18;
         padding = {
           top = 1;
@@ -44,29 +44,6 @@
           key = "󰅐 ";
           keyColor = "36";
         }
-        "break"
-        {
-          type = "cpu";
-          format = "{1} ({2}) @ {4}";
-          key = "󰻠 ";
-          keyColor = "31";
-        }
-        {
-          type = "gpu";
-          key = "󰢮 ";
-          keyColor = "34";
-        }
-        {
-          type = "memory";
-          format = "{} / {}";
-          key = " ";
-          keyColor = "32";
-        }
-        {
-          type = "disk";
-          key = "󰋊 ";
-          keyColor = "33";
-        }
         {
           type = "wm";
           format = "{} ({3})";
@@ -78,8 +55,6 @@
           type = "colors";
           symbol = "circle";
         }
-        "break"
-        "break"
       ];
     };
   };
