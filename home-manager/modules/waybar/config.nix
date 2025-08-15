@@ -24,6 +24,7 @@
       "tray"
 			"custom/spacer"
       "backlight"
+      "battery"
 			"pulseaudio"
 			"custom/spacer"
 			"custom/notification"
@@ -36,7 +37,7 @@
 		};
 
     "pulseaudio" =  {
-      format = "<b>{volume}%</b> {icon}";
+      format = "<b>{volume}%</b> {icon} ";
       format-muted = " 󰝟 ";
       format-bluetooth = "<b>{volume}%</b> {icon} ";
       format-bluetooth-muted = "󰝟 ";
@@ -56,7 +57,7 @@
     };
 
     "backlight" = {
-      format = "{icon} <b>{percent}%</b> |";
+      format = "{icon} <b>{percent}%</b> | ";
       format-icons =  [
         "󰃞"
         "󰃟"
@@ -68,6 +69,26 @@
     "tray" = {
       icon-size = 15;
       spacing = 5;
+    };
+
+    "battery" = {
+      format = "{icon} {capacity}% | ";
+      format-plugged = " {capacity}% | ";
+      format-icons = [
+        ""
+        ""
+        ""
+        ""
+        ""
+      ];
+      max-length = 25;
+      tooltip = true;
+      interval = 5;
+      states = {
+        good = 70;
+        warning = 30;
+        critical = 1;
+      };
     };
 
 		# Hyprland modules

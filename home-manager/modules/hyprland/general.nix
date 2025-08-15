@@ -7,7 +7,6 @@
 
 		exec-once = [
 			# "${pkgs.waybar}/bin/waybar"
-			"waybar"
 			"${pkgs.swaynotificationcenter}/bin/swaync"
 			"${pkgs.waypaper}/bin/waypaper --restore"
 

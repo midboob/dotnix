@@ -11,6 +11,7 @@
 
 # hyprland
 	wayland.windowManager.hyprland = {
+    systemd.enable = true;
 		enable = true;
 	};
 

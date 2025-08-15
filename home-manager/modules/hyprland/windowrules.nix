@@ -1,7 +1,7 @@
 {
   wayland.windowManager.hyprland.settings = {
 
-		workspace = "1, monitor:DP-6";
+		# workspace = "1, monitor:DP-6";
 
     windowrule = [
       # Picture-in-Picture PART 1

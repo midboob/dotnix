@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ config, pkgs, ... }: {
 
   #Boot settings
 	boot = {
@@ -58,4 +58,26 @@
 		__VK_LAYER_NV_optimus = "NVIDIA_only";
 		NVD_BACKEND = "direct";
 	};
+
+  # OpenRGB
+  services.hardware.openrgb = {
+    enable = true; 
+    package = pkgs.openrgb-with-all-plugins; 
+    motherboard = "amd"; 
+  };
+
+  systemd.user.services.openrgb-profile = {
+    Unit = {
+      Description = "Apply OpenRGB profile at login";
+      After = [ "graphical-session.target" ];
+      Wants = [ "graphical-session.target" ];
+    };
+    Service = {
+      Type = "simple";
+      ExecStart = "${pkgs/openrgb}/bin/openrgb --no-gui --profile %h/.config/OpenRGB/white.orp";
+    };
+    Install = {
+      WantedBy = [ "default.target" ]; # or "graphical-session.target" on newer HM setups
+    };
+  };
 }

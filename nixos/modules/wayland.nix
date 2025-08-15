@@ -54,7 +54,7 @@
 	};
 
 	xdg.mime.defaultApplications = {
-		"text/html" = "firefox.desktop";
+		"text/html" = "brave-browser.desktop";
 		"image/*" = "eog.desktop";
 		"video/*" = "mpv.desktop";
 		"inode/directory" = "org.gnome.Nautilus.desktop";

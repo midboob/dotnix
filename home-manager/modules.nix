@@ -23,7 +23,7 @@
 
 
 		./modules/startpage
-		./modules/openrgb
+		# ./modules/openrgb
 		./modules/mpv
 		./modules/ohmyposh
 		./modules/fastfetch
