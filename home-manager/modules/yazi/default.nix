@@ -36,6 +36,15 @@
         ueberzug_scale = 1;
         ueberzug_offset = [ 0 0 0 0 ];
       };
+
+      opener = {
+        edit = [
+          {
+            run = ''${pkgs.neovim}/bin/nvim "$@"'';
+            block = true;
+            }
+          ];
+        };
     };
   };
 }
