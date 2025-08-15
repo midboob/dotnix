@@ -26,5 +26,6 @@
 		./modules/openrgb
 		./modules/mpv
 		./modules/ohmyposh
+		./modules/fastfetch
 	];
 }
