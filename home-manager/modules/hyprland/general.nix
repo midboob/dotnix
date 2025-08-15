@@ -1,12 +1,13 @@
 { pkgs, config, lib, ... }: {
 	wayland.windowManager.hyprland.settings = {
 		monitor = [ 
-			",highrr,0x0,1"
-			"HDMI-A-2,1920x1080@70,1920x0,1"
+			"eDP-1,1920x1080@60,0x0,1"
+			# "HDMI-A-2,1920x1080@70,1920x0,1"
 		];
 
 		exec-once = [
-			"${pkgs.waybar}/bin/waybar"
+			# "${pkgs.waybar}/bin/waybar"
+			"waybar"
 			"${pkgs.swaynotificationcenter}/bin/swaync"
 			"${pkgs.waypaper}/bin/waypaper --restore"
 

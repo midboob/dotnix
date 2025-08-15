@@ -1,6 +1,6 @@
 {
 	imports = [
-		./modules/desktop.nix
+		# ./modules/desktop.nix
 		# ./modules/laptop.nix
 
 		./modules/packages.nix
