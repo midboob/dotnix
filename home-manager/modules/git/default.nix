@@ -29,7 +29,7 @@
         abbrevCommit = true;  # short commit hashes in log
         graphColors  = "blue,yellow,cyan,magenta,green,red";
 
-        commit.template = ${./template}
+        commit.template = "${./template}";
       };
 		};
 	};
