@@ -29,6 +29,7 @@
 	];
 
 	environment.sessionVariables = {
+    GSK_RENDERER = "ngl";
 		GTK_USE_PORTAL = "0";
 		GDK_BACKEND = "wayland,x11";
 		SDL_VIDEODRIVER = "wayland";
@@ -41,14 +42,15 @@
 
 	xdg = {
 		portal = {
+      enable = true;
 			xdgOpenUsePortal = true;
 			config = {
-				common.default = [ "gtk" "hyprland" ];
-				hyprland.default = [ "gtk" "hyprland" ];
+				common.default = [ "hyprland" "gtk" ];
+				hyprland.default = [ "hyprland" "gtk" ];
 			};
 			extraPortals = with pkgs; [
-				xdg-desktop-portal-gtk
 				xdg-desktop-portal-hyprland
+				xdg-desktop-portal-gtk
 			];
 		};
 	};

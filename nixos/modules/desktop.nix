@@ -23,15 +23,25 @@
     "/mnt/Storage" = {
         device = "/dev/disk/by-uuid/9A62A5A562A5871B";
         fsType = "ntfs-3g";
-        options = [ "rw" "uid=1000" "gid=100" "dmask=022" "fmask=133" ];
+        options = [ "defaults" "nofail" ];
       };
 
     "/mnt/Windows" = {
         device = "/dev/disk/by-uuid/16E288D1E288B711";
         fsType = "ntfs-3g";
-        options = [ "rw" "uid=1000" "gid=100" "dmask=022" "fmask=133" ];
+        options = [ "defaults" "nofail" ];
       };
     };
+
+  # Polkit rule to allow users in 'wheel' group to mount internal drives without password
+  environment.etc."polkit-1/rules.d/90-local-mount.rules".text = ''
+    polkit.addRule(function(action, subject) {
+        if (action.id == "org.freedesktop.udisks2.filesystem-mount-system" &&
+            subject.isInGroup("wheel")) {
+            return polkit.Result.YES;
+        }
+    });
+  '';
 
   # Graphic Settings
 	hardware.nvidia = {
