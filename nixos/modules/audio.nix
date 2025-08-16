@@ -1,4 +1,6 @@
 { pkgs, ... }: {
+
+	 security.rtkit.enable = true;
 	 services.pipewire = {
 		 enable = true;
 		 pulse.enable = true;
@@ -7,7 +9,6 @@
 		 jack.enable = true;
 		 wireplumber.enable = true;
 	 };
-	 security.rtkit.enable = true;
 
 	environment.systemPackages = with pkgs; [
 	paprefs

@@ -10,7 +10,7 @@
 		./modules/rofi
 		./modules/kitty
 		./modules/tmux
-		./modules/zsh
+		./modules/fish
 
 		./modules/git
 		./modules/cli
