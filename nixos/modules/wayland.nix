@@ -30,7 +30,7 @@
 
 	environment.sessionVariables = {
     GSK_RENDERER = "ngl";
-		GTK_USE_PORTAL = "0";
+		# GTK_USE_PORTAL = "0";
 		GDK_BACKEND = "wayland,x11";
 		SDL_VIDEODRIVER = "wayland";
 		CLUTTER_BACKEND = "wayland";

@@ -93,7 +93,7 @@
     };
   };
 
-  # Optimizations
+  # # Optimizations
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.initrd.kernelModules = [ "ntsync" ];
   boot.kernelParams = [
