@@ -15,8 +15,8 @@
 		./modules/git
 		./modules/cli
 		./modules/firefox
-		# ./modules/nixvim
-		./modules/nvim
+		./modules/nixvim
+		# ./modules/nvim
 		./modules/nixcord
 		./modules/spicetify
 		./modules/yazi
