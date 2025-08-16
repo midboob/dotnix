@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
 
-  #Boot settings
+  # Boot settings
 	boot = {
     loader = {
       grub = {
@@ -62,22 +62,22 @@
   # OpenRGB
   services.hardware.openrgb = {
     enable = true; 
-    package = pkgs.openrgb-with-all-plugins; 
+    package = pkgs.openrgb; 
     motherboard = "amd"; 
   };
 
   systemd.user.services.openrgb-profile = {
-    Unit = {
-      Description = "Apply OpenRGB profile at login";
-      After = [ "graphical-session.target" ];
-      Wants = [ "graphical-session.target" ];
-    };
-    Service = {
+    description = "Apply OpenRGB profile at login";
+    after = [ "graphical-session.target" ];
+    wants = [ "graphical-session.target" ];
+    partOf = [ "graphical-session.target" ];
+    wantedBy = [ "default.target" ];
+
+    serviceConfig = {
       Type = "simple";
-      ExecStart = "${pkgs/openrgb}/bin/openrgb --no-gui --profile %h/.config/OpenRGB/white.orp";
-    };
-    Install = {
-      WantedBy = [ "default.target" ]; # or "graphical-session.target" on newer HM setups
+      ExecStart = "${pkgs.openrgb}/bin/openrgb --no-gui --profile %h/.config/OpenRGB/white.orp";
+      Restart = "on-failure";
+      RestartSec = 2;
     };
   };
 }

@@ -11,11 +11,11 @@ in {
     };
     Service = {
       Type = "simple";
-      ExecStart = "${openrgbBin} --startminimized --profile ${profile}";
+      ExecStart = "${openrgbBin} --no-gui --profile ${profile}";
       # If you prefer headless: ExecStart = "${openrgbBin} --no-gui --profile ${profile}";
     };
     Install = {
-      WantedBy = [ "default.target" ]; # or "graphical-session.target" on newer HM setups
+      WantedBy = [ "graphical-session.target" ]; # or "graphical-session.target" on newer HM setups
     };
   };
 }

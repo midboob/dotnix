@@ -71,7 +71,7 @@
 			mpris = {
 				image-size = 96;
 				image-radius = 12;
-				blacklist = [];
+				blacklist = [ "Spotify" "playerctld" ];
 			};
 
 			buttons-grid = {
