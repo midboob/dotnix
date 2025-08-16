@@ -1,36 +1,38 @@
 {
-	programs.git = {
-		enable = true;
-		userName = "midboob";
-		userEmail = "edwarddan72@gmail.com";
-		extraConfig = {
+  programs.git = {
+    enable = true;
+    userName = "midboob";
+    userEmail = "edwarddan72@gmail.com";
 
-    core = {
-      compression = 9;          # zlib level 0–9
-      whitespace  = "error";    # treat whitespace problems as errors
-      editor = "nvim";
-    };
+    extraConfig = {
+      core = {
+        compression = 9;
+        editor = "nvim";
+        whitespace = "error"; # (unrelated to the template)
+      };
 
-			init.defaultBranch = "main";
-    
+      init.defaultBranch = "main";
+
       status = {
-        branch             = true;
-        short              = true;
-        showStash          = true;
-        showUntrackedFiles = "all"; # show individual files in untracked dirs
+        branch = true;
+        short = true;
+        showStash = true;
+        showUntrackedFiles = "all";
       };
 
       diff = {
-        context = 3;          # fewer context lines in diffs
-        renames = "copies";   # detect copies as renames in diffs
+        context = 3;
+        renames = "copies";
       };
 
       log = {
-        abbrevCommit = true;  # short commit hashes in log
-        graphColors  = "blue,yellow,cyan,magenta,green,red";
-
-        commit.template = "${./template}";
+        abbrevCommit = true;
+        graphColors = "blue,yellow,cyan,magenta,green,red";
       };
-		};
-	};
+
+      commit = {
+        template = "${./template}";
+      };
+    };
+  };
 }

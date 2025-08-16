@@ -5,6 +5,7 @@
 		"$lock" = "${pkgs.swaylock}/bin/swaylock";
     "$menu" = "${pkgs.rofi-wayland}/bin/rofi";
 		"$colorPicker" = "${pkgs.hyprpicker}/bin/hyprpicker -a";
+		"$noti-center" = "${pkgs.swaynotificationcenter}/bin/swaync-client -t -sw";
 
     "$terminal" = "${pkgs.kitty}/bin/kitty";
     "$browser" = "${pkgs.brave}/bin/brave";
@@ -33,6 +34,7 @@
       "$mod, O, exec, $notes"
       "$mod, N, exec, $editor"
       "$mod SHIFT, B, exec, $bluetooth"
+      "$mod SHIFT, N, exec, $noti-center"
 
       "$mod, Z, exec, $colorPicker"
       "$mod SHIFT, W, exec, $wallpaper"

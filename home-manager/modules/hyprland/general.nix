@@ -7,7 +7,7 @@
 
 		exec-once = [
 			# "${pkgs.waybar}/bin/waybar"
-			"${pkgs.swaynotificationcenter}/bin/swaync"
+			# "${pkgs.swaynotificationcenter}/bin/swaync"
 			"${pkgs.waypaper}/bin/waypaper --restore"
 
 			# Set volume to #100%

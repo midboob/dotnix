@@ -7,8 +7,7 @@
 			adblock
 			keyboardShortcut
 			hidePodcasts
-      shuffle
-      fullAppDisplayMod
+      fullScreen
 		];
     enabledCustomApps = with spicePkgs.apps; [
       lyricsPlus

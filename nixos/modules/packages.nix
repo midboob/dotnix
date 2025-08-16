@@ -20,7 +20,6 @@
 		nautilus
 		networkmanagerapplet
 		switcheroo
-		wlogout
 		localsend
 		openrgb
 		waybar
